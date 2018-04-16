@@ -12,7 +12,7 @@
         checkerBoard = new CheckerBoard(numRows, numCols, boardWidth, boardHeight, lightColor, darkColor);
         stackPane.getChildren().add(checkerBoard.build());
     ```
-    * vs
+    * VS
     ```Java
         boardWidth = vBox.getWidth();
         boardHeight = vBox.getHeight() - menuBar.getHeight();  // height of anchorPane
@@ -40,8 +40,10 @@
     
 
 2. **How well did you understand the programming concepts and foundational knowledge needed to complete the challenge?**
-
+    * 
 
 3. **How well did you meet the requirements as set out in the challenge? What requirements did you not meet correctly (if any)?**
+    * 
 
 5. **How could you improve going forward? What don't you still understand that was required for the challenge?**
+    * Keep in mind of SOLID design principles and always remember to stay away from duplication of code.
