@@ -6,6 +6,10 @@
     * When assigning the dimension variables, I parsed the text of the menu and got the number where as the solution used switch cases to match them. In the long run, my solution would be able take in any dimensional size defined in the MenuItem where as the class solution would have to manually add switch case for each additional dimension. 
 
     * Strangely enough, I remember I was having the problem of not being able to have the right square dimension when presenting the board, eventually I figured out to subtract the menubar height from the board height calculation. Glad to know the class solution did the same way.
+    ```Java
+      boardWidth = vBox.getWidth();
+      boardHeight = vBox.getHeight() - menuBar.getHeight();
+    ```
     
 
 2. **How well did you understand the programming concepts and foundational knowledge needed to complete the challenge?**
