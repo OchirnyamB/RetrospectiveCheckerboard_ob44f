@@ -38,12 +38,12 @@
       boardHeight = vBox.getHeight() - menuBar.getHeight();
     ```
     
-
 2. **How well did you understand the programming concepts and foundational knowledge needed to complete the challenge?**
-    * 
+    * because we had a in class example to draw a grid with multiple rectangles, and the foundational knowledge we have received during previous examples, I was able to figure out what exactly is needed to complete the challenge. 
 
 3. **How well did you meet the requirements as set out in the challenge? What requirements did you not meet correctly (if any)?**
-    * I met both the UI and the controller requirements sufficiently as I mentioned above in question 1.
+    * I met both the UI and the controller requirements sufficiently as I mentioned above in question 1. 
+    * Below is the sample output of my checkerboard.
     * ![picture alt](https://github.com/OchirnyamB/RetrospectiveCheckerboard_ob44f/blob/master/BoardOutput.jpg "Checkerboard")
 
 5. **How could you improve going forward? What don't you still understand that was required for the challenge?**
