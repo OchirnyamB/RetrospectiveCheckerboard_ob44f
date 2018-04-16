@@ -43,7 +43,8 @@
     * 
 
 3. **How well did you meet the requirements as set out in the challenge? What requirements did you not meet correctly (if any)?**
-    * 
+    * I met both the UI and the controller requirements sufficiently as I mentioned above in question 1.
+    * ![picture alt](https://github.com/OchirnyamB/RetrospectiveCheckerboard_ob44f/blob/master/BoardOutput.jpg "Checkerboard")
 
 5. **How could you improve going forward? What don't you still understand that was required for the challenge?**
     * Keep in mind of SOLID design principles and always remember to stay away from duplication of code.
