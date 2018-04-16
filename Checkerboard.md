@@ -1,7 +1,34 @@
-1. **Reflect on (think about) the work you did for the challenge. How did you do? What did you get right? What did you get wrong? What did you do differently (and possibly better) than what was posted in the solution? What was hard to do?**
+1. **How well does your solution match the posted solution? What is different?**
     * Overally, my implementation was pretty similar to the class solution, we both have a checkerboard class that builds the right checkerboard and passes an anchorpane back to the UI controller. When building the checkerboard I was right in having two different constructors to differentiate between the default checkerboard and the colored checkerboard. 
 
     * However, one important difference I noticed was that when calling for the checkerboard class to initialize, the class solution uses a single object instance call where as I did two. The class solution used a switch case to call setter function to set the global dark and light colors so that it can make use of the second constructor to build both checkerboard cases. In my solution, however I have an if statement based on a boolean flag which calls for the right constructor.
+    
+    * When building the checkerboard, the class solution returns the anchorpane as its return type where as I made it void and used the getAnchorPane function to receive it. I realize now that I could have saved few lines of code if I did it the other way.
+    ```Java
+        boardWidth = scene.getWidth();
+        boardHeight = scene.getHeight() - menuBar.getHeight();
+        
+        stackPane.getChildren().clear();
+        checkerBoard = new CheckerBoard(numRows, numCols, boardWidth, boardHeight, lightColor, darkColor);
+        stackPane.getChildren().add(checkerBoard.build());
+    ```
+    * vs
+    ```Java
+        boardWidth = vBox.getWidth();
+        boardHeight = vBox.getHeight() - menuBar.getHeight();  // height of anchorPane
+        Checkerboard board;
+        // flag is set to indicate different colored board initializaiton
+        if (defaultColor == true) {
+            board = new Checkerboard(numRows, numCols, boardWidth, boardHeight);
+        } // no color specified instance
+        else {
+            board = new Checkerboard(numRows, numCols, boardWidth, boardHeight, lightColor, darkColor);
+        }  // color specified instance
+        clearBoard();              // clear board or remove current anchorpane when redrawing the different sized board
+        board.build();             // call the public build board function in Checkerboard class 
+        anchorPane = board.getBoard();
+        vBox.getChildren().add(anchorPane);
+    ```
 
     * When assigning the dimension variables, I parsed the text of the menu and got the number where as the solution used switch cases to match them. In the long run, my solution would be able take in any dimensional size defined in the MenuItem where as the class solution would have to manually add switch case for each additional dimension. 
 
@@ -16,7 +43,5 @@
 
 
 3. **How well did you meet the requirements as set out in the challenge? What requirements did you not meet correctly (if any)?**
-
-4. **How well does your solution match the posted solution? What is different?**
 
 5. **How could you improve going forward? What don't you still understand that was required for the challenge?**
